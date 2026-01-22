@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+</head>
+<style>
+    h2 {
+        color: hsla(251, 87%, 45%, 0.836);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    button {
+        font-size: 18px;
+        margin: 5px;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input {
+        padding: 8px;
+        font-size: 18px;
+        margin: 5px;
+        border: 1px solid black;
+        border-radius: 4px;
+    }
+    p {
+        font-size: 20px;
+        font-weight: bold;
+        color: #fa1313dc;
+    }
+</style>
+<body>
+    <h2>Simple Calculator</h2>
+    <input type="number" id="num1" placeholder="First number"><br><br>
+    <input type="number" id="num2" placeholder="Second number"><br><br>
+    
+    <button onclick="add()">Add (+)</button>
+    <button onclick="subtract()">Subtract (-)</button>
+    <button onclick="mul()">Mul(*)</button>
+    <button onclick="div()">Div (/)</button>
+
+    <p id="result">Result will appear here</p>
+    
+    <script>
+        function add() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = 
+                `Result: ${a} + ${b} = ${a + b}`;
+        }
+        
+        function subtract() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = 
+                `Result: ${a} - ${b} = ${a - b}`;
+        }
+        function mul() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = 
+                `Result: ${a} * ${b} = ${a * b}`;
+        }
+        function div() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+            document.getElementById("result").innerHTML = 
+                `Result: ${a} / ${b} = ${a / b}`;
+        }
+    </script>
+</body>
+</html>
+    
